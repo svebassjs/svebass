@@ -3,7 +3,6 @@ import pkg from './package.json'
 import serve from 'rollup-plugin-serve'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
-// import css from 'rollup-plugin-postcss'
 import html from '@rollup/plugin-html'
 
 const name = pkg.name
@@ -14,9 +13,8 @@ const name = pkg.name
 const dev = process.env.NODE_ENV === 'development'
 
 const plugins = [
-	resolve({ browser: true }),
+	resolve(),
 	commonjs(),
-	// css(),
 	svelte()
 ]
 
