@@ -1,6 +1,6 @@
 {
   "name": "@svebass/flexbox",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Responsive Svelte Box and Flex components built with Styled System and Emotion, heavily inspired by RebassJS.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -41,5 +41,8 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.37.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
