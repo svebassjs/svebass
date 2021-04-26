@@ -1,10 +1,10 @@
 import svelte from 'rollup-plugin-svelte'
 import pkg from './package.json'
-// import serve from 'rollup-plugin-serve'
+import serve from 'rollup-plugin-serve'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 // import css from 'rollup-plugin-postcss'
-// import html from '@gen/rollup-plugin-generate-html'
+import html from '@rollup/plugin-html'
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -14,7 +14,7 @@ const name = pkg.name
 const dev = process.env.NODE_ENV === 'development'
 
 const plugins = [
-	resolve(),
+	resolve({ browser: true }),
 	commonjs(),
 	// css(),
 	svelte()
@@ -27,21 +27,25 @@ const output = [
 
 if (dev) {
 	plugins.push(
-		// html({
-		// 	template: 'demo/index.html',  // Default undefined
-    //   filename: 'index.html', // Default index.html
-    //   publicPath: 'dist' // Default undefined
-		// }),
-		// serve({
-		// 	contentBase: 'dist',
-		// 	port: 12001
-		// })
+		html({
+			// template: 'demo/index.html',  // Default undefined
+      fileName: 'index.html', // Default index.html
+      publicPath: '' // Default undefined
+		}),
+		serve({
+      open: true,
+			contentBase: 'dist',
+			port: 12001
+		})
 	)
 }
 
+const external = Object.keys(pkg.dependencies);
+
 export default {
-	// input: dev ? './demo/demo.js' : './src/Box.svelte',
-	input: './src/Box.svelte',
+	input: dev ? './demo/index.js' : './src/Box.svelte',
+  external: dev ? [] : external,
+	// input: './src/Box.svelte',
 	output,
 	plugins
 }

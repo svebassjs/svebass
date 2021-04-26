@@ -1,7 +1,7 @@
 {
   "name": "@svebass/flexbox",
   "version": "0.1.0",
-  "description": "Responsive Svelte grid system built with Styled System and Emotion, heavily inspired by RebassJS.",
+  "description": "Responsive Svelte Box and Flex components built with Styled System and Emotion, heavily inspired by RebassJS.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "keywords": [
@@ -31,13 +31,15 @@
     "@styled-system/flexbox": "^5.1.2",
     "@styled-system/layout": "^5.1.2",
     "@styled-system/space": "^5.1.2",
-    "@styled-system/typography": "^5.1.2",
-    "svelte": "^3.37.0"
+    "@styled-system/typography": "^5.1.2"
   },
   "devDependencies": {
+    "@rollup/plugin-html": "^0.2.3",
     "rollup": "^2.45.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^7.1.0"
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.37.0"
   }
 }
