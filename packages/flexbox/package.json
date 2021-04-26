@@ -34,11 +34,10 @@
     "@styled-system/typography": "^5.1.2"
   },
   "devDependencies": {
-    "@rollup/plugin-html": "^0.2.3",
+    "@gen/rollup-plugin-generate-html": "^0.1.1",
     "rollup": "^2.45.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-svelte": "^7.1.0"
   },
   "publishConfig": {
