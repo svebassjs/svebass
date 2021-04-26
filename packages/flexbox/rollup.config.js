@@ -32,7 +32,7 @@ if (dev) {
 		}),
 		serve({
       open: true,
-			contentBase: 'dist',
+			contentBase: 'src',
 			port: 12001
 		})
 	)
@@ -41,9 +41,9 @@ if (dev) {
 const external = Object.keys(pkg.dependencies);
 
 export default {
-	input: dev ? './demo/index.js' : './src/Box.svelte',
-  external: dev ? [] : external,
-	// input: './src/Box.svelte',
+	input: dev ? './demo/index.js' : './src/index.js',
+  // https://stackoverflow.com/questions/64152594/should-svelte-libraries-include-external-svelte-in-rollup-config-js-func  
+  external: [...external, 'svelte', 'svelte/internal'],
 	output,
 	plugins
 }
