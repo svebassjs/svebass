@@ -62,7 +62,6 @@ This allows you to share design constraints for typography, color, and layout th
 ```
 
 Note: to opt-out of theme-based styles, use the `css` prop instead, which will not transform values.
-> TODO: ADD BASE CSS AND TESTS
 
 ## Theming
 

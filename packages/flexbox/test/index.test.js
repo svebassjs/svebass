@@ -94,6 +94,23 @@ describe('Box', () => {
     expect(el).toHaveStyleRule('border', '1px solid cyan');
   });
 
+  test('renders with css prop', () => {
+    const el = render(
+      Box, {
+        props: {
+          css: {
+            margin: 4, // Renders 4px instead of theme shorthand
+            padding: 16,
+            color: 'tomato',
+          },
+        },
+      },
+    );
+    expect(el).toHaveStyleRule('margin', '4px');
+    expect(el).toHaveStyleRule('padding', '16px');
+    expect(el).toHaveStyleRule('color', 'tomato');
+  });
+
   test('renders with variants', () => {
     const el = render(Box, {
       props: {
