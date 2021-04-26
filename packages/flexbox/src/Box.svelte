@@ -10,6 +10,7 @@
   import { flexbox } from '@styled-system/flexbox';
 
   const sx = (sxProps, theme) => css(sxProps)(theme);
+  
   const variant = ({
     theme,
     variant,
@@ -20,12 +21,12 @@
       )
     )(theme)
 
-  const theme = getContext('theme');
+  const theme = $$props.theme || getContext('theme');
 
   const className = emotionCss(
     sx({
       boxSizing: 'border-box',
-      ...variant({ theme, variant: $$props.variant }),
+      ...variant({ theme, variant: $$props.variant, tx: $$props.tx }),
       ...space($$props),
       ...layout($$props),
       ...typography($$props),
