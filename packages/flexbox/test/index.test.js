@@ -1,7 +1,6 @@
 import { render as svelteRender } from '@testing-library/svelte';
 import { matchers } from '@emotion/jest';
-import Box from '../src/Box.svelte';
-import Flex from '../src/Flex.svelte';
+import { Box, Flex } from '../dist/index';
 
 expect.extend(matchers);
 
