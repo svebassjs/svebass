@@ -1,6 +1,0 @@
-{
-  "extends": "@tsconfig/svelte/tsconfig.json",
-
-  "include": ["packages/flexbox/src/*"],
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
-}
