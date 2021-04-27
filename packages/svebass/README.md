@@ -63,7 +63,7 @@ Svebass is intended to be:
 - [Props](https://rebassjs.org/props)
 - [Extending](https://rebassjs.org/extending)
 - [Theming](https://rebassjs.org/theming) -->
-- [Flexbox](../flexbox/README.md)
+- [Flexbox](https://github.com/svebassjs/svebass/tree/main/packages/flexbox)
 <!-- - [Text](https://rebassjs.org/Text)
 - [Heading](https://rebassjs.org/Heading)
 - [Button](https://rebassjs.org/Button)
