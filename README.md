@@ -1,1 +1,1 @@
-packages/svebass/README.md
+./packages/svebass/README.md
