@@ -1,7 +1,7 @@
 {
-  "name": "@svebass/flexbox",
+  "name": "svebass",
   "version": "1.1.2",
-  "description": "Responsive Svelte Box and Flex components built with Styled System and Emotion, heavily inspired by RebassJS.",
+  "description": "Primitive, themeable UI components for Svelte, built with Styled System.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "keywords": [
@@ -24,13 +24,7 @@
   "license": "MIT",
   "author": "Tanner Marshall",
   "dependencies": {
-    "@emotion/css": "^11.1.3",
-    "@styled-system/color": "^5.1.2",
-    "@styled-system/css": "^5.1.5",
-    "@styled-system/flexbox": "^5.1.2",
-    "@styled-system/layout": "^5.1.2",
-    "@styled-system/space": "^5.1.2",
-    "@styled-system/typography": "^5.1.2"
+    "@svebass/flexbox": "^1.1.2"
   },
   "devDependencies": {
     "rollup": "^2.45.2"
