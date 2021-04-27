@@ -21,6 +21,7 @@ const plugins = [
     preprocess: typescript({
       tsconfigDirectory: '../../',
     }),
+    generate: 'ssr',
   }),
 ];
 
