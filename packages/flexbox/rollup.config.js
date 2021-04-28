@@ -10,8 +10,6 @@ const name = pkg.name
   .replace(/^\w/, (m) => m.toUpperCase())
   .replace(/-\w/g, (m) => m[1].toUpperCase());
 
-// const dev = process.env.NODE_ENV === 'development'
-
 const plugins = [
   resolve({
     browser: true,
@@ -21,10 +19,10 @@ const plugins = [
     preprocess: typescript({
       tsconfigDirectory: '../../',
     }),
-    compilerOptions: {
-      generate: 'ssr',
-      hydratable: true,
-    },
+    // compilerOptions: {
+    //   generate: 'ssr',
+    //   hydratable: true,
+    // },
   }),
 ];
 

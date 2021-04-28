@@ -44,6 +44,9 @@ yarn add svebass
 - Flexbox layout with the Box and Flex components
 - Flexibility built in for high design & development velocity
 
+## SSR
+👷‍♂️ Work in progress 👷‍♂️
+
 ## Principles
 
 Svebass is intended to be:

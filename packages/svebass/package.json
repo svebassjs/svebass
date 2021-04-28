@@ -24,7 +24,7 @@
   "license": "MIT",
   "author": "Tanner Marshall",
   "dependencies": {
-    "@svebass/flexbox": "^1.1.2"
+    "@svebass/flexbox": "^1.1.5"
   },
   "devDependencies": {
     "rollup": "^2.45.2"

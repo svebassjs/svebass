@@ -63,6 +63,13 @@ This allows you to share design constraints for typography, color, and layout th
 
 Note: to opt-out of theme-based styles, use the `css` prop instead, which will not transform values.
 
+### `as` Prop
+Passing an `as` prop and a tagname will convert the resulting container into the tag. [Until dynamic tags are supported](https://github.com/sveltejs/svelte/pull/5481) in Svelte, only a select few tags are supported:
+* `div`
+* `button`
+* `a`
+* `img`
+
 ## Theming
 
 Because Flexbox follows the [Theme Specification][], all themes built for use with [Styled System][], [Theme UI][], or other related libraries are compatible with Flexbox.

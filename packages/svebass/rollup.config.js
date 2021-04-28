@@ -21,10 +21,10 @@ const plugins = [
     preprocess: typescript({
       tsconfigDirectory: '../../',
     }),
-    compilerOptions: {
-      generate: 'ssr',
-      hydratable: true,
-    },
+    // compilerOptions: {
+    //   generate: 'ssr',
+    //   hydratable: true,
+    // },
   }),
 ];
 
