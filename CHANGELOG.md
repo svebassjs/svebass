@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.5 2021-04-28
+
+### Changed
+- Build process to use SSR and hydratable
+
 ## 1.1.3 2021-04-27
 
 ### Added
