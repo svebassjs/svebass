@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.6 2021-04-28
+
+### Added
+- `as` prop for `img`, `button`, and `a`
+
+### Changed
+- Reverted SSR and hydratable
+
 ## 1.1.5 2021-04-28
 
 ### Changed
