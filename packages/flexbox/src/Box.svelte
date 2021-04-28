@@ -9,6 +9,12 @@
   import { color } from '@styled-system/color';
   import { flexbox } from '@styled-system/flexbox';
 
+  const tags = ['a', 'button', 'img', 'div'] as const;
+  type TagsProps = typeof tags;
+  type TagProps = TagsProps[number];
+
+  const parseBase = (__css, theme) => styledSystemCss(__css)(theme)
+
   const parseSx = (sxProps, theme) => styledSystemCss(sxProps)(theme);
   
   const parseVariant = ({
@@ -26,24 +32,47 @@
   export let tx: string = undefined;
   export let sx: { [index: string]: any} = {};
   export let css: { [index: string]: any} = {};
+  export let __css: { [index: string]: any} = {}; // Base css
+  export let as: TagProps = 'div';
 
   const className = emotionCss(
     {
       ...parseSx({
         boxSizing: 'border-box',
+        ...parseBase(__css, theme),
         ...parseVariant({ theme, variant, tx }),
+        ...(sx),
         ...space($$props),
         ...layout($$props),
         ...typography($$props),
         ...color($$props),
         ...flexbox($$props),
-        ...(sx),
       }, theme),
       ...(css || {})
     }
   );
 </script>
 
-<div class={className}>
-  <slot></slot>
-</div>
+<!-- Currently no way to dynamically create elements, waiting on this Svelte PR - https://github.com/sveltejs/svelte/pull/5481 -->
+
+{#if as === 'div'}
+  <div {...$$props} class={className}>
+    <slot></slot>
+  </div>
+{/if}
+
+{#if as === 'button'}
+  <button {...$$props} class={className}>
+    <slot></slot>
+  </button>
+{/if}
+
+{#if as === 'a'}
+  <a {...$$props} class={className}>
+    <slot></slot>
+  </a>
+{/if}
+
+{#if as === 'img'}
+  <img {...$$props} class={className} />
+{/if}

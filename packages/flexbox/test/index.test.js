@@ -17,7 +17,23 @@ describe('Box', () => {
     expect(el.nodeName).toBe('DIV');
   });
 
-  // TODO: Render with "as" prop
+  test('renders as button', () => {
+    const el = render(Box, { props: { as: 'button' } });
+
+    expect(el.nodeName).toBe('BUTTON');
+  });
+
+  test('renders as a', () => {
+    const el = render(Box, { props: { as: 'a' } });
+
+    expect(el.nodeName).toBe('A');
+  });
+
+  test('renders as img', () => {
+    const el = render(Box, { props: { as: 'img' } });
+
+    expect(el.nodeName).toBe('IMG');
+  });
 
   test('renders with styles props', () => {
     const el = render(Box, { props: { width: 1 } });
