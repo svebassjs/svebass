@@ -1,6 +1,6 @@
 {
   "name": "svebass",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Primitive, themeable UI components for Svelte, built with Styled System.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "author": "Tanner Marshall",
   "dependencies": {
-    "@svebass/flexbox": "^1.1.6"
+    "@svebass/flexbox": "^1.1.7"
   },
   "devDependencies": {},
   "publishConfig": {
