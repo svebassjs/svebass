@@ -22,7 +22,7 @@
     variant,
     tx = 'variants',
   }) => styledSystemCss(
-      get(theme, tx + '.' + variant,
+      get(theme, `${tx}${variant ? `.${variant}` : ''}`,
         get(theme, variant)
       )
     )(theme)
