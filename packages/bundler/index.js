@@ -80,7 +80,7 @@ packages.forEach((pkg) => {
   //   plugins: ssrPlugins,
   // };
 
-  // const ssrOutputOptions = { file: `${pkg}/dist/ssr/index.js`, format: 'umd', name };
+  // const ssrOutputOptions = { file: `${pkg}/ssr/index.js`, format: 'umd', name };
 
   // build(ssrInputOptions, ssrOutputOptions);
 });
