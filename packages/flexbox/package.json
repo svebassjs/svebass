@@ -18,9 +18,7 @@
     "css",
     "style"
   ],
-  "scripts": {
-    "build": "rollup -c"
-  },
+  "scripts": {},
   "license": "MIT",
   "author": "Tanner Marshall",
   "dependencies": {
@@ -32,9 +30,7 @@
     "@styled-system/space": "^5.1.2",
     "@styled-system/typography": "^5.1.2"
   },
-  "devDependencies": {
-    "rollup": "^2.45.2"
-  },
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },
